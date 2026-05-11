@@ -62,7 +62,7 @@ st.markdown(
 # =========================
 
 st.markdown(
-    '<p class="title">✈️ Cargo Acceptance Rejection Forecasting</p>',
+    '<p class="title">Cargo Acceptance Rejection Forecasting</p>',
     unsafe_allow_html=True
 )
 
@@ -83,45 +83,45 @@ col1, col2 = st.columns(2)
 
 with col1:
 
-    st.subheader("📦 Shipment Information")
+    st.subheader("Shipment Information")
 
     airline = st.selectbox(
-        "✈️ Airline",
+        "Airline",
         ['Emirates', 'Qatar', 'Lufthansa', 'Air India']
     )
 
     SHC = st.selectbox(
-        "📋 SHC",
+        "SHC",
         ['DGR', 'PER', 'AVI', 'VAL', 'PIL', 'COL', 'HUM']
     )
 
     origin = st.selectbox(
-        "🌍 Origin",
+        "Origin",
         ['HAM', 'DXB', 'MAA', 'OSL', 'AMS', 'JFK', 'MXP', 'FRA', 'PVG']
     )
 
     destination = st.selectbox(
-        "📍 Destination",
+        "Destination",
         ['JED']
     )
 
     packaging_condition = st.selectbox(
-        "📦 Packaging Condition",
+        "Packaging Condition",
         ['Good', 'Average', 'Damaged']
     )
 
     packaging_seal_status = st.selectbox(
-        "🔒 Packaging Seal Status",
+        "Packaging Seal Status",
         ['Intact', 'Tampered', 'Broken', 'Missing']
     )
 
     shipper_company_name = st.selectbox(
-        "🏢 Shipper Company",
+        "Shipper Company",
         ['DB Schenker', 'FedEx', 'DHL', 'Maersk', 'Aramex', 'BlueDart', 'UPS', 'Amazon Logistics']
     )
 
     consignee_name = st.selectbox(
-        "👤 Consignee Name",
+        "Consignee Name",
         ['Gulf Fresh Foods', 'Al Jazeera Trading', 'Jeddah Electronics',
         'Arabian Medical Supply', 'Middle East Retail Group', 'Desert Logistics',
         'Red Sea Imports', 'Saudi Pharma Ltd']
@@ -133,55 +133,55 @@ with col1:
 
 with col2:
 
-    st.subheader("🛡️ Compliance & Security")
+    st.subheader("Compliance & Security")
 
     shipper_type = st.selectbox(
-        "🚚 Shipper Type",
+        "Shipper Type",
         ['Corporate', 'Retail', 'Agent']
     )
 
     documentation_status = st.selectbox(
-        "📄 Documentation Status",
+        "Documentation Status",
         ['Complete', 'Pending', 'Missing']
     )
 
     security_screening_status = st.selectbox(
-        "🛂 Security Screening Status",
+        "Security Screening Status",
         ['Cleared', 'Manual Inspection Required', 'Pending', 'Failed']
     )
 
     xray_scan_result = st.selectbox(
-        "🩻 X-Ray Scan Result",
+        "X-Ray Scan Result",
         ['Clear', 'Suspicious', 'Manual Review Required', 'Restricted Item Detected']
     )
 
     shipment_priority = st.selectbox(
-        "⚡ Shipment Priority",
+        "Shipment Priority",
         ['Normal', 'Express', 'VIP']
     )
 
     cargo_weight_kg = st.number_input(
-        "⚖️ Cargo Weight (kg)",
+        "Cargo Weight (kg)",
         min_value=0.0,
         value=100.0
     )
 
     damage_history_count = st.number_input(
-        "📉 Damage History Count",
+        "Damage History Count",
         min_value=0,
         max_value=50,
         value=0
     )
 
     compliance_violation_count = st.number_input(
-        "🚨 Compliance Violation Count",
+        "Compliance Violation Count",
         min_value=0,
         max_value=50,
         value=0
     )
 
     shipper_reliability_score = st.number_input(
-        "⭐ Shipper Reliability Score",
+        "Shipper Reliability Score",
         min_value=0,
         max_value=100,
         value=80
