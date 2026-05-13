@@ -216,6 +216,7 @@ if st.button("🔍 Predict Cargo Status"):
         'xray_scan_result': [xray_scan_result],
         'shipment_priority': [shipment_priority],
 
+        
         'cargo_weight_kg': [cargo_weight_kg],
         'damage_history_count': [damage_history_count],
         'compliance_violation_count': [compliance_violation_count],
@@ -223,7 +224,6 @@ if st.button("🔍 Predict Cargo Status"):
     })
 
     input_data = input_data[[
-        'shipment_date',
         'airline',
         'SHC',
         'origin',
