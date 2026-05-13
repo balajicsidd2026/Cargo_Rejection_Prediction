@@ -261,9 +261,3 @@ if st.button("🔍 Predict Cargo Status"):
 
         st.success("✅ Prediction Result: Accepted Cargo")
 
-    # Probability Display
-    st.subheader("📊 Rejection Probability")
-
-    st.progress(float(prediction_prob))
-
-    st.write(f"### Probability Score: {prediction_prob:.2f}")
