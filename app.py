@@ -223,7 +223,7 @@ if st.button("🔍 Predict Cargo Status"):
     })
 
     input_data = input_data[[
-        'shipment_date'
+        'shipment_date',
         'airline',
         'SHC',
         'origin',
