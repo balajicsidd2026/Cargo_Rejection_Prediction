@@ -84,7 +84,9 @@ col1, col2 = st.columns(2)
 with col1:
 
     st.subheader("Shipment Information")
-
+    shipment_date = st.date_input(
+    "📅 Shipment Date"
+)
     airline = st.selectbox(
         "Airline",
         ['Emirates', 'Qatar', 'Lufthansa', 'Air India']
@@ -197,7 +199,7 @@ if st.button("🔍 Predict Cargo Status"):
 
     # Create Input DataFrame
     input_data = pd.DataFrame({
-
+        'Shipment_Date':[shipment_date]
         'airline': [airline],
         'SHC': [SHC],
         'origin': [origin],
@@ -219,6 +221,7 @@ if st.button("🔍 Predict Cargo Status"):
     })
 
     input_data = input_data[[
+        'shipment_date'
         'airline',
         'SHC',
         'origin',
