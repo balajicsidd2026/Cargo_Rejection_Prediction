@@ -289,22 +289,22 @@ if st.button("Predict Cargo Status"):
 # =========================
 # Feature Contribution Analysis
 # =========================
-
-st.markdown("<br>", unsafe_allow_html=True)
-
-st.markdown("""
-<h1 style='color:#2d2d3a; font-size:42px; font-weight:bold;'>
-Feature Contribution Analysis
-</h1>
-""", unsafe_allow_html=True)
-
-st.markdown("""
-<h2 style='color:#2d2d3a; font-size:28px; font-weight:bold; margin-bottom:20px;'>
-Feature Influence on Current Prediction
-</h2>
-""", unsafe_allow_html=True)
-
-# Real Feature Importance Values
+if st.button("Predict Cargo Status"):
+    st.markdown("<br>", unsafe_allow_html=True)
+    
+    st.markdown("""
+    <h1 style='color:#2d2d3a; font-size:42px; font-weight:bold;'>
+    Feature Contribution Analysis
+    </h1>
+    """, unsafe_allow_html=True)
+    
+    st.markdown("""
+    <h2 style='color:#2d2d3a; font-size:28px; font-weight:bold; margin-bottom:20px;'>
+    Feature Influence on Current Prediction
+    </h2>
+    """, unsafe_allow_html=True)
+    
+    # Real Feature Importance Values
 
 features = [
     "packaging_seal_status",
