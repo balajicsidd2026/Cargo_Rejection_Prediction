@@ -289,96 +289,96 @@ if st.button("Predict Cargo Status"):
 # =========================
 # Feature Contribution Analysis
 # ========================
-st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown("<br>", unsafe_allow_html=True)
+        
+    st.markdown("""
+    <h1 style='color:#2d2d3a; font-size:42px; font-weight:bold;'>
+    Feature Contribution Analysis
+    </h1>
+    """, unsafe_allow_html=True)
+        
+    st.markdown("""
+    <h2 style='color:#2d2d3a; font-size:28px; font-weight:bold; margin-bottom:20px;'>
+    Feature Influence on Current Prediction
+    </h2>
+    """, unsafe_allow_html=True)
+        
+        # Real Feature Importance Values
     
-st.markdown("""
-<h1 style='color:#2d2d3a; font-size:42px; font-weight:bold;'>
-Feature Contribution Analysis
-</h1>
-""", unsafe_allow_html=True)
+    features = [
+        "packaging_seal_status",
+        "xray_scan_result",
+        "shipper_reliability_score",
+        "compliance_violation_count",
+        "documentation_status",
+        "damage_history_count",
+        "cargo_weight_kg",
+        "month",
+        "security_screening_status",
+        "day_of_week"
+    ]
     
-st.markdown("""
-<h2 style='color:#2d2d3a; font-size:28px; font-weight:bold; margin-bottom:20px;'>
-Feature Influence on Current Prediction
-</h2>
-""", unsafe_allow_html=True)
+    importance = [
+        19.705755,
+        16.124521,
+        14.701518,
+        13.606497,
+        10.264653,
+        7.643616,
+        2.821063,
+        2.592779,
+        2.525383,
+        2.070268
+    ]
     
-    # Real Feature Importance Values
-
-features = [
-    "packaging_seal_status",
-    "xray_scan_result",
-    "shipper_reliability_score",
-    "compliance_violation_count",
-    "documentation_status",
-    "damage_history_count",
-    "cargo_weight_kg",
-    "month",
-    "security_screening_status",
-    "day_of_week"
-]
-
-importance = [
-    19.705755,
-    16.124521,
-    14.701518,
-    13.606497,
-    10.264653,
-    7.643616,
-    2.821063,
-    2.592779,
-    2.525383,
-    2.070268
-]
-
-# Create Plotly Figure
-fig = go.Figure()
-
-fig.add_trace(go.Bar(
-    x=importance,
-    y=features,
-    orientation='h',
-    text=[f"{round(x,2)}%" for x in importance],
-    textposition='outside',
-    marker=dict(
-        color='#0b66c3'
-    )
-))
-
-# Layout Styling
-fig.update_layout(
-    height=500,
-
-    plot_bgcolor='#f3f3f3',
-    paper_bgcolor='#f3f3f3',
-
-    xaxis=dict(
-        showgrid=False,
-        visible=False
-    ),
-
-    yaxis=dict(
-        autorange='reversed',
-        title='',
-        tickfont=dict(
-            size=15,
-            color='#7d8597'
+    # Create Plotly Figure
+    fig = go.Figure()
+    
+    fig.add_trace(go.Bar(
+        x=importance,
+        y=features,
+        orientation='h',
+        text=[f"{round(x,2)}%" for x in importance],
+        textposition='outside',
+        marker=dict(
+            color='#0b66c3'
         )
-    ),
-
-    font=dict(
-        family="Arial",
-        size=15,
-        color="#2d2d3a"
-    ),
-
-    margin=dict(
-        l=260,
-        r=100,
-        t=20,
-        b=40
+    ))
+    
+    # Layout Styling
+    fig.update_layout(
+        height=500,
+    
+        plot_bgcolor='#f3f3f3',
+        paper_bgcolor='#f3f3f3',
+    
+        xaxis=dict(
+            showgrid=False,
+            visible=False
+        ),
+    
+        yaxis=dict(
+            autorange='reversed',
+            title='',
+            tickfont=dict(
+                size=15,
+                color='#7d8597'
+            )
+        ),
+    
+        font=dict(
+            family="Arial",
+            size=15,
+            color="#2d2d3a"
+        ),
+    
+        margin=dict(
+            l=260,
+            r=100,
+            t=20,
+            b=40
+        )
     )
-)
-
-# Display Chart
-st.plotly_chart(fig, use_container_width=True)
+    
+    # Display Chart
+    st.plotly_chart(fig, use_container_width=True)
