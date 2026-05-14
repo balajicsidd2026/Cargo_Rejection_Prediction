@@ -348,7 +348,7 @@ fig.add_trace(go.Bar(
 
 # Layout Styling
 fig.update_layout(
-    height=750,
+    height=500,
 
     plot_bgcolor='#f3f3f3',
     paper_bgcolor='#f3f3f3',
@@ -362,14 +362,14 @@ fig.update_layout(
         autorange='reversed',
         title='',
         tickfont=dict(
-            size=18,
+            size=15,
             color='#7d8597'
         )
     ),
 
     font=dict(
         family="Arial",
-        size=18,
+        size=15,
         color="#2d2d3a"
     ),
 
